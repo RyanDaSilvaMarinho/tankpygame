@@ -11,7 +11,6 @@ gameDisplay = pygame.display.set_mode((display_width, display_height))
 
 pygame.display.set_caption('Tank Destroyer Game')
 
-global textSurface
 wheat = (245, 222, 179)
 
 white = (255, 255, 255)
@@ -88,7 +87,7 @@ def tank(x, y, turPos):
                        (x - 11, y - 21)
                        ]
 
-    pygame.draw.circle(gameDisplay, pink, (x, y), int(tankHeight / 2))
+    pygame.draw.circle(gameDisplay, pink, (x, y), int(tankHeight/2 ))
     pygame.draw.rect(gameDisplay, pink, (x - tankHeight, y, tankWidth, tankHeight))
 
     pygame.draw.line(gameDisplay, pink, (x, y), possibleTurrets[turPos], turretWidth)
@@ -519,7 +518,7 @@ def health_bars(player_health, enemy_health):
 def gameLoop():
     gameExit = False
     gameOver = False
-    FPS = 15
+    FPS = 60
 
     player_health = 100
     enemy_health = 100
